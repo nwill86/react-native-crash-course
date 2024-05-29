@@ -4,6 +4,7 @@ import {Redirect, router } from 'expo-router'
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { images } from '../constants';
+import CustomButton from "../components/CustomButton";
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
 
           <View className="relative mt-5">
             <Text className="text-3xl text-white font-bold text-center">
-              Discover Endless Possibilites with{" "}
+              Discover Endless Possibilities with{" "}
               <Text className="text-secondary-200">Aora</Text>
             </Text>
 
@@ -39,8 +40,16 @@ export default function App() {
             Where creativity meets innovation: embark on a journey of limitless
             exploration with Aora
           </Text>
+
+          <CustomButton 
+            title="Continue with Email"
+            handlePress={() => {}}
+            containerStyles="w-full mt-7"
+          />
         </View>
       </ScrollView>
+
+      <StatusBar backgroundColor='#161622' style='light' />
     </SafeAreaView>
   );
 }
